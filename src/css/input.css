@@ -1,0 +1,158 @@
+/* ================= Reset ================= */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= Body ================= */
+body{
+  background-color: #222;
+  color: #fff;
+  font-family: system-ui;
+}
+
+/* ================= Main Container ================= */
+.crud{
+  width: 90%;
+  margin: auto;
+}
+
+/* ================= Header ================= */
+.head{
+  text-align: center;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+
+input:focus{
+  background-color: #000;
+  transform: scale(1.1);
+}
+/* ================= Inputs ================= */
+input{
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: #111;
+  margin: 4px 0;
+  border-radius: 4px;
+  padding: 4px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+input:focus{
+  background-color: #000;
+}
+
+/* ================= Price Inputs ================= */
+.price{
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.price input{
+  width: 20%;
+}
+
+#total{
+  background-color: rgb(195, 10, 10);
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+
+#total::before{
+  content: "total ";
+}
+
+/* ================= Buttons ================= */
+button{
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(127, 12, 233);
+  padding: 6px;
+  color: #fff;
+  transition: 0.3s;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: rgb(132, 0, 255);
+  letter-spacing: 2px;
+}
+
+/* ================= Search Buttons ================= */
+.btnSearch{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.btnSearch button{
+  width: 48%;
+}
+
+/* ================= Table ================= */
+table{
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  border-spacing: 5px;
+}
+
+table th,
+table td{
+  padding: 6px;
+}
+
+table button{
+  width: auto;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+/* ================= Responsive ================= */
+
+/* 📱 Mobile */
+@media (max-width: 768px){
+
+  .price{
+    flex-direction: column;
+  }
+
+  .price input{
+    width: 100%;
+  }
+
+  .btnSearch{
+    flex-direction: column;
+  }
+
+  .btnSearch button{
+    width: 100%;
+  }
+
+  table{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* 💻 Large Screens */
+@media (min-width: 1200px){
+  .crud{
+    width: 80%;
+  }
+}
+
+
+span{
+  color: red;
+}

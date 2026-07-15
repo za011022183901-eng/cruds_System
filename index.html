@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NEW SESON</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="src/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/css/input.css" />
+  </head>
+
+  <body>
+
+
+    <div class="crud">
+     
+      <div class="head">
+        <h2>crud</h2>
+        <p>product management system</p>
+      </div>
+
+
+      <div class="input">
+        <input placeholder="tittle" type="text" id="tttle" >
+
+        <div class="price">
+          <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+          <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+          <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+          <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+
+          <smal id="total"></smal>
+        </div>
+
+        <input placeholder="count" type="number" id="count" >
+        <input placeholder="category" type="text" id="category" >
+        <button id="supmit">create</button>
+        
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="outputs">
+
+        <div class="searchBlock">
+        <input type="text" oninput="search(this.value)" placeholder="search by tittle" id="search">
+
+         <div class="btnSearch">
+
+        <button onclick="getSearch(this.id)" id="searchTittle">search by tittle</button>
+        <button onclick="getSearch(this.id)" id="searchCategory">search by category</button>
+        
+         </div>
+        </div>
+      </div>
+
+     <div id="deleteALL">  </div>     
+
+      <table>
+        <tr>
+          <th>id</th>
+          <th>tittle</th>
+          <th>price</th>
+          <th>taxes</th>
+          <th>adds</th>
+          <th>discount</th>
+          <th>tottalt</th>
+          <th>category</th>
+          <th>update</th>
+          <th>delete</th>
+        </tr>
+          <tbody id="tbody"> 
+    
+         </tbody>
+      </table>
+
+    
+      
+    </div>
+   
+
+
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
